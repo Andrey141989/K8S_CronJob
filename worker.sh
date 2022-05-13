@@ -9,13 +9,8 @@ kubectl version --client
  
 #kubectl connection setup
 kubectl config set-cluster default-cluster --insecure-skip-tls-verify=true --server="${KUBE_URL}"
-if [ -z ${KUBE_USER+x} ]; then
     echo "TOKEN Auth used"
-    kubectl config set-credentials default-admin --token="${KUBE_TOKEN}"
-else
-    echo "LOGIN/PASSWORD Auth used"
-    kubectl config set-credentials default-admin --username="${KUBE_USER}" --password="${KUBE_PASSWORD}"
-fi
+kubectl config set-credentials default-admin --token="${KUBE_TOKEN}"
  
 kubectl config set-context default-system --user=default-admin --namespace="${KUBE_NAMESPACE}" --cluster=default-cluster
 kubectl config use-context default-system
