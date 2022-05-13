@@ -2,7 +2,7 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: genrptpy-deployment-restart
-  namespace: "$KUBE_NAMESPACE"
+  namespace: "KUBE_NAMESPACE"
 spec:
   concurrencyPolicy: Forbid
   schedule: '0 1 * * *'        #restart every day at 01:00

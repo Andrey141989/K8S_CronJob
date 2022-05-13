@@ -21,7 +21,6 @@ cd manifests/
 sed -i "s%KUBE_NAMESPACE%${KUBE_NAMESPACE}%" CronJob.yml
 sed -i "s%DEPLOYMENT_NAME%${DEPLOYMENT_NAME}%" CronJob.yml
 sed -i "s%KUBE_NAMESPACE%${KUBE_NAMESPACE}%" RoleBinding.yml
-sed -i "s%DEPLOYMENT_NAME%${DEPLOYMENT_NAME}%" Role.yml
 sed -i "s%KUBE_NAMESPACE%${KUBE_NAMESPACE}%" Role.yml
 sed -i "s%KUBE_NAMESPACE%${KUBE_NAMESPACE}%" ServiceAccount.yml
  
